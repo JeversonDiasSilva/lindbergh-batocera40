@@ -5,7 +5,7 @@ Suporte a jogos **Sega Lindbergh** no **Batocera 40**, que não traz esse sistem
 O instalador coloca o **lindbergh-loader v2.0** já ajustado para o Batocera 40, registra o sistema
 **"Sega Lindbergh"** no EmulationStation e configura a saída do jogo pelo controle.
 
-> ⚠️ **Nenhum jogo vem incluído.** Use cópias dos seus próprios jogos.
+> ⚠️ Use somente cópias de jogos que você possui.
 
 ---
 
@@ -15,6 +15,14 @@ No terminal do Batocera (pelo SSH ou em **F1 > Terminal**), rode:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/JeversonDiasSilva/lindbergh-batocera40/main/install.sh | bash
+```
+
+Ele instala o loader e também **baixa e instala o OutRun 2 SP SDX** (~900 MB): baixa em `/tmp`, confere o
+SHA-256, descompacta em `/userdata/roms/lindbergh/lindbergh/outr2sdx` e ajusta as permissões.
+Para instalar **só o loader**, sem o jogo:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/JeversonDiasSilva/lindbergh-batocera40/main/install.sh | bash -s -- --sem-jogo
 ```
 
 Depois **reinicie o EmulationStation** (Menu > Sair > Reiniciar EmulationStation) para o sistema
@@ -37,7 +45,7 @@ O instalador confere o SHA-256 do pacote antes de instalar.
 
 ---
 
-## 🎮 Adicionar os jogos
+## 🎮 Adicionar outros jogos
 
 Copie a pasta de cada jogo para:
 
